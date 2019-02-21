@@ -64,25 +64,9 @@ Name: name, dtype: int64
 **Output:**
 
 ```
-	code	name
-0	8	Human development
-1	8	Human development
-2	8	Human development
-3	8	Human development
-4	8	Human development
-5	8	Human development
-6	8	Human development
-7	8	Human development
-8	8	Human development
-9	8	Human development
-10	8	Human development
-11	8	Human development
-12	8	Human development
-13	8	Human development
-14	8	Human development
-15	8	Human development
-16	8	Human development
-17	8	Human development
-18	8	Human development
-19	8	Human development
+# Verifying there's no missing name
+merged[merged.name=='']
+
+
+code	name
 ```
