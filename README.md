@@ -1,6 +1,6 @@
-### Mini Project1: JSON Based Data Exercise
+## Mini Project1: JSON Based Data Exercise
 
-This World Bank dataset from a school quality impent project in Ethiopia
+This mini project takes advantage of a World Bank dataset from a school quality improvement project in Ethiopia to demonstrate the use of JSON files. 
 
 ```
 countryname
