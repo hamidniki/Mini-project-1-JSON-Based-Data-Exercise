@@ -4,13 +4,13 @@ This mini project takes advantage of a World Bank dataset from a school quality 
 
 #### Question 1: Find the 10 countries with most projects
 
-Approach:
+**Approach:**
 - Load the JSON data as a PANDAS dataframe
 - Group by countryname 
 - Aggregate by count, sort by descending count
 - Filter the top 10 most frequently appearing country names
 
-Output:
+**Output:**
 ```
 countryname
 People's Republic of China         19
@@ -28,12 +28,12 @@ Name: countryname, dtype: int64
 
 #### Question 2: Find the top 10 major project themes
 
-Approach:
+**Approach:**
 - Load the JSON data 
 - Normalize by the `mjtheme_namecode` variable and save as a pandas dataframe
 - With the same approach as in the last question, list the 10 most frequencty accuring `name`s.
 
-Output:
+**Output:**
 ```
 name
 Environment and natural resources management    223
@@ -47,4 +47,42 @@ Social dev/gender/inclusion                     119
 Trade and integration                            72
 Urban development                                47
 Name: name, dtype: int64
+```
+
+#### Question 3: Create a dataframe with the missing names filled in
+
+**Approach:**
+
+- Using the same dataframe created in previous question, make a 2-way tabulation of the values of `code` and `name` to verify that each `code` is either only associated to one value of `name` or the `name` is missing,
+- Create a second dataframe of unique `code` and,non missing, `name` values,
+- Merge this dataframe with the original dataframe by `code`
+- Replace the old `name` column with the new one
+- Drop the extra `name` column
+- Rename variables to their original names
+- Verify there is no missing `name`
+
+**Output:**
+
+```
+	code	name
+0	8	Human development
+1	8	Human development
+2	8	Human development
+3	8	Human development
+4	8	Human development
+5	8	Human development
+6	8	Human development
+7	8	Human development
+8	8	Human development
+9	8	Human development
+10	8	Human development
+11	8	Human development
+12	8	Human development
+13	8	Human development
+14	8	Human development
+15	8	Human development
+16	8	Human development
+17	8	Human development
+18	8	Human development
+19	8	Human development
 ```
